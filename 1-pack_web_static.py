@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 1. Compress before sending
+to web server
 """
 from fabric.api import *
 from datetime import datetime
@@ -21,4 +22,3 @@ def do_pack():
     if result.failed:
         return None
     return archive_path
-
