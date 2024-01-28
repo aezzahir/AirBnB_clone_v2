@@ -45,13 +45,13 @@ def python_route(text="is cool"):
     return f"Python {escape(text)}".replace("_", " ")
 
 
-@app.route("/number/<n>", strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """
     Is a number ...
     """
-    if (int(n) == float(n)):
-        return f"{escape(n)} is a number"
+    if isinstance(n, int):
+        return f"{n} is a number"
 
 
 if __name__ == '__main__':
