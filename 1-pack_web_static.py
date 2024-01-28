@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 1. Compress before sending
+to web server
 """
 
 from fabric.api import *
